@@ -17,7 +17,6 @@ module.exports = {
         })
     }
   },
-  //
   userCategories: {
     path: '/usercategories',
     reqType: 'get',
