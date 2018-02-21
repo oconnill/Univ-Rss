@@ -35,19 +35,10 @@
                             <a @click="closeSidebar" data-toggle="modal" data-target="#editFeedModal">
                                 <i class="fa fa-gear fa-lg"></i> Edit Feeds</a>
                         </li>
-                        <li v-for="category in categories">
-                            <a :href="'#'+ category._id" data-toggle="collapse" aria-expanded="false">
-                                {{category.name}}
-                                <i class="fa fa-remove" @click="removeCategory(category._id)"></i>
+                        <li v-for="feed in feeds">
+                            <a v-if="category._id == feed.categoryId" class="feed-name">
+                                <h6>{{feed.title}}</h6>
                             </a>
-                            <ul class="collapse list unstyled" :id="category._id">
-                                <li v-for="feed in feeds">
-                                    <a v-if="category._id == feed.categoryId" class="feed-name">
-                                        <input type="checkbox" class="form-check-input" :id="feed._id">
-                                        <h6>{{feed.name}}</h6>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </li>

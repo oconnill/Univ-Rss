@@ -4,10 +4,10 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div>
-                        <p><b>"{{quote.quote}}"</b></p>
+                        <h4><b>" {{quote.quote}} "</b></h4>
                     </div>
                     <div>
-                        <h4>-{{quote.author}}</h4>
+                        <h5>-{{quote.author}}-</h5>
                     </div>
                 </div>
             </div>

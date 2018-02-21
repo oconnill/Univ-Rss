@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="col-sm-10">
-                <div class="panel-style text-center animated" v-if="user.clock">
+                <div class="panel-style clock text-center animated" v-if="user.clock">
                     <h1>
                         <Clock :blink="true" />
                     </h1>
@@ -89,6 +89,10 @@
 
     .navbar {
         border: 0px;
+    }
+
+    .clock {
+        font-size: 100px;
     }
 
     .sidebar-button {

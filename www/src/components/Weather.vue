@@ -4,7 +4,7 @@
             <div class="icon col-sm-6">
                 <img :src="'http://openweathermap.org/img/w/'+ weather.weather[0].icon +'.png'">
             </div>
-            <div class="temp col-sm-6">
+            <div class="temp col-sm-12">
                 <h4>{{weather.main.temp}}°</h4>
             </div>
             <div class="weatherName col-sm-12 text-center">
@@ -41,7 +41,7 @@
         margin: 0 auto !important;
         float: none;
         padding: 0 auto;
-        color: lightgray;
+        color: black;
     }
 
     .temp {
@@ -49,8 +49,15 @@
         margin: 0 auto;
     }
 
+    h4 {
+        display: inline-block;
+        font-size: 40px;
+        color: black;
+    }
+
     .icon {
         display: inline-block;
+        padding-left: 25px
     }
 
     .weather-panel {

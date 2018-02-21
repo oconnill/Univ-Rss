@@ -194,8 +194,8 @@
   .quote {
     position: fixed;
     bottom: 0px;
-    left: 1px;
-    max-width: 75vw;
+    left: 450px;
+    max-width: 45vw;
   }
 
   .main {

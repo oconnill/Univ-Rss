@@ -31,7 +31,7 @@ var store = new vuex.Store({
     weather: {},
     events: {},
     quote: {},
-    feeds: {},
+    feeds: [],
     height: {},
     searchResults: {},
     categories: {}
@@ -445,17 +445,18 @@ var store = new vuex.Store({
           commit('setSearchResults', res.data)
         })
     },
-    postFeed({ commit, dispatch }, payload) {
-      api.post('feeds', payload.data)
-        .then(res => {
-          console.log("feed get: ", res)
-          dispatch('getFeedsByUser')
-          // commit('setFeeds', res.data)
-        })
-    },
+    // postFeed({ commit, dispatch }, payload) {
+    //   api.post('feeds', payload.data)
+    //     .then(res => {
+    //       console.log("feed get: ", res)
+    //       dispatch('getFeedsByUser')
+    //       // commit('setFeeds', res.data)
+    //     })
+    // },
     addUserFeed({ commit, dispatch }, payload){
       api.put('/feeds/' + payload._id, payload)
       .then(res => {
+        console.log(res)
         dispatch('getFeedsByUser', res.data)
       })
       .catch(err => {
@@ -501,8 +502,10 @@ var store = new vuex.Store({
     // },
     createFeed({ commit, dispatch }, feed) {
       api.post('/feeds', feed)
+      api.post('/submitfeed', feed)
         .then(res => {
           console.log("created feed: ", res.data)
+          commit("setFeeds", res.data)
           .catch(err => {
             commit('handleError', err)
           })

@@ -16,7 +16,7 @@
                     <!-- CREAT CATEGORY FORM -->
                     <div class="modal-body">
                         <div>
-                            <div class="input">
+                            <!-- <div class="input">
                                 <form type="submit" @submit.prevent="createCategory">
                                     <div class="form-group">
                                         <label>Create Category</label>
@@ -26,7 +26,7 @@
                                         <button type="submit">Create</button>
                                     </div>
                                 </form>
-                            </div>
+                            </div> -->
                             <div>
                                 <div class="input">
                                     <form type="submit" @submit.prevent="createFeed">
