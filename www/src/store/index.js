@@ -48,7 +48,6 @@ var store = new vuex.Store({
     },
     setUser(state, data) {
       state.user = data
-      // state.oauth = data
     },
     setWeather(state, data) {
       state.weather = data
