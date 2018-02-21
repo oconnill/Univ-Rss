@@ -79,7 +79,6 @@ var store = new vuex.Store({
       api('userboards')
         .then(res => {
           dispatch('modBoards', res.data.data)
-          // dispatch('setHeight', res.data.data)
         })
         .catch(err => {
           commit('handleError', err)
