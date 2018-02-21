@@ -5,8 +5,12 @@
   "author": "",
   "private": true,
   "scripts": {
-    "start": "node /server/index.js"
-},
+    "dev": "node build/dev-server.js",
+    "start": "node build/dev-server.js",
+    "build": "node build/build.js",
+    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "test": "npm run unit"
+  },
   "dependencies": {
     "axios": "^0.17.1",
     "jquery": "^3.2.1",
